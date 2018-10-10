@@ -1,15 +1,16 @@
 body{
-	background-image: url("../images/bg.png");
+	background: #457;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 
 .product {
-	width: 400px;
-	margin: auto;
-	padding: 5px 0px;
+	width: 30%;
+	margin: 10px;
+	padding: 1px 0px;
 	display: inline-block;
+
 }
 
  
@@ -18,7 +19,7 @@ h4 {
 	font-weight: normal;
 	margin: 0; 
 	font-size: 16pt;
-	color: #aaa; }
+	color: #000; }
  
 	figure img { max-width: 150px;
 	}
