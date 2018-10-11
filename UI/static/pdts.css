@@ -21,7 +21,8 @@ h4 {
 	font-size: 16pt;
 	color: #000; }
  
-	figure img { max-width: 150px;
+	figure img { 
+		max-width: 150px;
 	}
 
  
@@ -40,4 +41,7 @@ button {
 	button:hover {
 		background: #2f90d5;
 		
-	
+.containerbox{
+
+}
+

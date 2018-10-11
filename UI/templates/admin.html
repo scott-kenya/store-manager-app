@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="../static/untitl.css">
+  <link rel="stylesheet" type="text/css" href="../static/dash.css">
+  <link rel="stylesheet" type="text/css" href="../static/index.css">
+  <link rel="stylesheet" type="text/css" href="../static/login.css">
+  <link rel="stylesheet" type="text/css" href="../static/sales.css">
+  <link rel="stylesheet" type="text/css" href="../static/products.css">
+  <link rel="stylesheet" type="text/css" href="../static/single.css">
+  <link rel="stylesheet" type="text/css" href="../static/pdts.css">
+  <style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The grid: Three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+    padding: 50px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+}
+
+.containerTab {
+    padding: 20px;
+    color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Closable button inside the container tab */
+.closebtn {
+    float: right;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+  <nav>
+    <div class="navbar">
+  <a href="#home">Store Manager</a>
+  <a class="active" href="#home">Home</a>
+  <a href="../templates/singlepdt.html">Product Details</a>
+  <a href="../templates/product.html">Products</a>
+ 
+
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;background-color: #ccc;color: #000;">Admin Login</button>
+</div>
+  </nav>
+<!-- code here -->
+
+
+<!-- Three columns -->
+<div style="color: #000;" class="row">
+  <div class="column" onclick="openTab('b1');" style="background:#5C4F4F;">
+    Sales Trajectory
+  </div>
+  <div class="column" onclick="openTab('b2');" style="background:#261F1F; color: #fff;">
+    View Sales
+  </div>
+  <div class="column" onclick="openTab('b3');" style="background:#6C6C6C;">
+    Add Products
+  </div>
+  <div class="column" onclick="openTab('b4');" style="background:#BBA9A9;">
+    Create Account
+  </div>
+</div>
+
+<!-- Full-width columns: (hidden by default) -->
+<div id="b1" class="containerTab" style="display:none;background:#5C4F4F;">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Sales Trajectory</h2>
+  <p>Black Forest</p>
+                <div class="container">
+                <div class="cake bf">90%</div>
+                </div>
+
+                <p>Chocolate Cake</p>
+                <div class="container">
+                <div class="cake choc">80%</div>
+                </div>
+
+                <p>Cookies</p>
+                <div class="container">
+                <div class="cake cook">65%</div>
+                </div>
+
+                <p>Vanilla Cake</p>
+                <div class="container">
+                <div class="cake van">60%</div>
+                </div>
+</div>
+
+<div id="b2" class="containerTab" style="display:none;background:#261F1F;;">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>View Sales</h2>
+  <!-- code here -->
+<div style="color: #000;" class="box2">
+<h2>My Customers</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<table style="margin-left: -10px;" id="myTable">
+  <tr class="header">
+    <th style="width:20%;">Attendants Name</th>
+    <th style="width:20%;">Product ID</th>
+    <th style="width:20%;">No of Transactions</th>
+    <th style="width:20%;">Weekly Amount(ksh)</th>
+    <th style="width:20%;">Total Amount(kshs)</th>
+  </tr>
+  <tr>
+    <td>John Doe</td>
+    <td>Q234</td>
+    <td>20</td>
+    <td>9800</td>
+    <td>102,000</td>
+    
+  </tr>
+  <tr>
+     <td>Jane Doe</td>
+    <td>Q234</td>
+    <td>29</td>
+    <td>9800</td>
+    <td>192,000</td>
+  </tr>
+  <tr>
+    <td>Sarah kay</td>
+    <td>Q234</td>
+    <td>79</td>
+    <td>9800</td>
+    <td>10,002,000</td>
+  </tr>
+  <tr>
+    <td>Paul Walker</td>
+    <td>Q234</td>
+    <td>59</td>
+    <td>98000</td>
+    <td>10,200,000</td>
+  </tr>
+  <tr>
+     <td>Scott Dela</td>
+    <td>Q234</td>
+    <td>49</td>
+    <td>9800</td>
+    <td>300,000</td>
+  </tr>
+  <tr>
+     <td>Sueabby Babes</td>
+    <td>Q234</td>
+    <td>56</td>
+    <td>9800</td>
+    <td>1,102,000</td>
+  </tr>
+  <tr>
+    <td>Joseph Lutwama</td>
+    <td>Q234</td>
+    <td>209</td>
+    <td>9800</td>
+    <td>102,000,000</td>
+  </tr>
+  <tr>
+     <td>Osama Laden</td>
+    <td>Q234</td>
+    <td>29</td>
+    <td>9800</td>
+    <td>102,000</td>
+  </tr>
+</table>
+</div>
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+</div>
+
+<div id="b3" class="containerTab" style="display:none;background:#6C6C6C;">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Add Products</h2>
+  <div style="overflow-x: auto;" class="box">
+    <table>
+      <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Action</th>
+        <th>Add</th>
+      </tr>
+      <tr style="color: #000;">
+        <td>Q001</td>
+        <td>Black forest</td>
+        <td>30</td>
+        <td>2500</td>
+        <td><button type="button" onclick="alert('Delete successful')" class="btn"><i class="fa fa-trash"></i> Delete Item</button></td>
+         <td><button type="button" onclick="alert('Added successful')" class="btn"><i class="fa fa-trash"></i> Add Item</button></td>
+      </tr>
+      <tr style="color: #000;">
+        <td>Q002</td>
+        <td>Coconut cake</td>
+        <td>30</td>
+        <td>2500</td>
+        <td><button type="button" onclick="alert('Delete successful')" class="btn"><i class="fa fa-trash"></i> Delete Item</button></td>
+         <td><button type="button" onclick="alert('Added successful')" class="btn"><i class="fa fa-trash"></i> Add Item</button></td>
+      </tr>
+      <tr style="color: #000;">
+        <td>Q003</td>
+        <td>Chocolate cake</td>
+        <td>30</td>
+        <td>2500</td>
+       <td><button type="button" onclick="alert('Delete successful')" class="btn"><i class="fa fa-trash"></i> Delete Item</button></td>
+         <td><button type="button" onclick="alert('Added successful')" class="btn"><i class="fa fa-trash"></i> Add Item</button></td>
+      </tr>
+      <tr style="color: #000;">
+        <td>Q004</td>
+        <td>Banana Cake</td>
+        <td>30</td>
+        <td>2500</td>
+        <td><button type="button" onclick="alert('Delete successful')" class="btn"><i class="fa fa-trash"></i> Delete Item</button></td>
+         <td><button type="button" onclick="alert('Added successful')" class="btn"><i class="fa fa-trash"></i> Add Item</button></td>
+      </tr>
+      <tr style="color: #000;">
+        <td>Q005</td>
+        <td>Icecream Cake</td>
+        <td>30</td>
+        <td>2500</td>
+       <td><button type="button" onclick="alert('Delete successful')" class="btn"><i class="fa fa-trash"></i> Delete Item</button></td>
+         <td><button type="button" onclick="alert('Added successful')" class="btn"><i class="fa fa-trash"></i> Add Item</button></td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div id="b4" class="containerbox" style="background:#BBA9A9;padding: 16px;">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Create Account</h2>
+  <p style="text-align: center;font-size: 30px;color: #fff;">Create Attendants Account</p>
+  <hr>
+  <label>Full Names</label>
+  <input style="width: 100%;padding: 15px;margin: 5px 0 22px 0;display: inline-block;border: none;
+    background: #f1f1f1;" type="text" name="" placeholder="Enter names">
+  <label>Employee ID</label>
+  <input style="width: 100%;padding: 15px;margin: 5px 0 22px 0;display: inline-block;border: none;
+    background: #f1f1f1;" type="text" name="" placeholder="Enter ID">
+  <label>Email Address</label>
+  <input style="width: 100%;padding: 15px;margin: 5px 0 22px 0;display: inline-block;border: none;
+    background: #f1f1f1;" type="text" name="" placeholder="Enter email">
+  <label>Password</label>
+  <input style="width: 100%;padding: 15px;margin: 5px 0 22px 0;display: inline-block;border: none;
+    background: #f1f1f1;" type="password" name="" placeholder="..............">
+  <label>Repeat Password</label>
+  <input style="width: 100%;padding: 15px;margin: 5px 0 22px 0;display: inline-block;border: none;
+    background: #f1f1f1;" type="password" name="" placeholder="..............">
+  <button style="background-color: #457;color: white;padding: 0px 10px;margin-top: -20px; border: none;cursor: pointer;width: 50%;margin-bottom: 100px; opacity: 0.9;font-size: 25px;" class="create" type="submit" onclick="alert('Account created successful')">Create</button>
+   
+  </div>
+
+
+<script>
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+</script>
+
+</body>
+</html> 

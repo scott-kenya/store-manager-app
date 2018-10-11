@@ -87,7 +87,7 @@ body {
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+    background-color: #457;
 }
 footer{
     background-color: #333;
