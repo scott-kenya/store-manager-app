@@ -61,8 +61,8 @@ body {
   <a href="../templates/product.html">Products</a>
  
 
-  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;background-color: #ccc;color: #000;">Admin Login</button>
+ <button style="width:auto;"><a style="margin-top: -15px;" href="../templates/index.html">Logout</a></button>
+   </div>
 </div>
   </nav>
 <!-- code here -->
@@ -263,9 +263,10 @@ function myFunction() {
     </table>
   </div>
 </div>
-<div id="b4" class="containerbox" style="background:#BBA9A9;padding: 16px;">
+<!--<div id="b4" class="containerbox" style="background:#BBA9A9;padding: 16px;">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
   <h2>Create Account</h2>
+  <div style="overflow-x: auto;" class="box">
   <p style="text-align: center;font-size: 30px;color: #fff;">Create Attendants Account</p>
   <hr>
   <label>Full Names</label>
@@ -285,8 +286,38 @@ function myFunction() {
     background: #f1f1f1;" type="password" name="" placeholder="..............">
   <button style="background-color: #457;color: white;padding: 0px 10px;margin-top: -20px; border: none;cursor: pointer;width: 50%;margin-bottom: 100px; opacity: 0.9;font-size: 25px;" class="create" type="submit" onclick="alert('Account created successful')">Create</button>
    
+  </div>-->
+  <div id="b4" class="containerTab" style="display:none;background:#6C6C6C;">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <h2>Add Products</h2>
+    <div style="overflow-x: auto;" class="box">
+     <div id="b4" class="containerbox" style="background:#BBA9A9;padding: 16px;">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Create Account</h2>
+  <div style="overflow-x: auto;" class="box">
+  <p style="text-align: center;font-size: 30px;color: #fff;">Create Attendants Account</p>
+  <hr>
+  <label>Full Names</label>
+  <input style="width: 100%;padding: 15px;margin: 5px 0 22px 0;display: inline-block;border: none;
+    background: #f1f1f1;" type="text" name="" placeholder="Enter names">
+  <label>Employee ID</label>
+  <input style="width: 100%;padding: 15px;margin: 5px 0 22px 0;display: inline-block;border: none;
+    background: #f1f1f1;" type="text" name="" placeholder="Enter ID">
+  <label>Email Address</label>
+  <input style="width: 100%;padding: 15px;margin: 5px 0 22px 0;display: inline-block;border: none;
+    background: #f1f1f1;" type="text" name="" placeholder="Enter email">
+  <label>Password</label>
+  <input style="width: 100%;padding: 15px;margin: 5px 0 22px 0;display: inline-block;border: none;
+    background: #f1f1f1;" type="password" name="" placeholder="..............">
+  <label>Repeat Password</label>
+  <input style="width: 100%;padding: 15px;margin: 5px 0 22px 0;display: inline-block;border: none;
+    background: #f1f1f1;" type="password" name="" placeholder="..............">
+  <button style="background-color: #457;color: white;padding: 0px 10px;margin-top: -20px; border: none;cursor: pointer;width: 50%;margin-bottom: 100px; opacity: 0.9;font-size: 25px;" class="create" type="submit" onclick="alert('Account created successful')">Create</button>
+   
+  </div> 
+    </div>
   </div>
-
+</div>
 
 <script>
 function openTab(tabName) {
@@ -298,6 +329,9 @@ function openTab(tabName) {
   document.getElementById(tabName).style.display = "block";
 }
 </script>
-
+<center>
+  <h1 style="margin-top: 10%;">WELCOME TO ZEN'S STORE</h1>
+  <img src="../images/smlogo.png">
+</center>
 </body>
 </html> 
