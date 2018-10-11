@@ -90,7 +90,7 @@ h3 {
   height: 550px;
   width: 400px;
   background: #ccc;
-  background: url('boku.jpg');
+  background: url('../images/chocolate.jpg');
   background-size: cover;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
   z-index: 10;
@@ -196,52 +196,7 @@ button:hover {
   margin-left:auto;
   margin-right:auto;
 }
-.color-options {
-  display:-webkit-box;
-  display:-webkit-flex;
-  display:-ms-flexbox;
-  display:flex;
-  width:50%;
-  -webkit-flex-flow:column;
-      -ms-flex-flow:column;
-          flex-flow:column;
-}
-.size-picker {
-  display:-webkit-box;
-  display:-webkit-flex;
-  display:-ms-flexbox;
-  display:flex;
-  -webkit-flex-flow:column;
-      -ms-flex-flow:column;
-          flex-flow:column;
-}
-.small {
-  font-size: 11px;
-  font-size:.7rem;
-  color:#999;
-  margin-top:10px;
-}
-.align-right {
-  -webkit-align-self:flex-end;
-      -ms-flex-item-align:end;
-          align-self:flex-end;
-}
-.size-desc {
-  -webkit-align-self:flex-end;
-      -ms-flex-item-align:end;
-          align-self:flex-end;
-}
 
-.purchase-info {
-  -webkit-box-pack:justify;
-  -webkit-justify-content:space-between;
-      -ms-flex-pack:justify;
-          justify-content:space-between;
-  display:-webkit-box;
-  display:-webkit-flex;
-  display:-ms-flexbox;
-  display:flex;
-}
 .price {
   font-size: 40px;
   font-size:2.5rem;

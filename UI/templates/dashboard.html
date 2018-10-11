@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="../static/index.css">
+  <link rel="stylesheet" type="text/css" href="../static/login.css">
+   <link rel="stylesheet" href="../static/untitl.css">
+    <script>
+      $(document).ready(function(){
+  $("a.mobile").click(function(){
+    $(".sidebar").slideToggle('fast');
+  });
+  window.resize = function(event){
+    if($(window).width() > 320){
+      $(".sidebar").show();
+    }
+  };
+});
+  </script>
+</head>
+<body>
+  <nav>
+    <div class="navbar">
+  <a href="#home">Store Manager</a>
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;background-color: #ccc;color: #000;">Admin Login</button>
+</div>
+  </nav>
+
+<!-- code here -->
+
+<div class="sidebar">
+            <ul id="nav">
+                <li>
+                    <span>
+          <img style="width: 30px; height: 40px;" src="../images/dash.png" width="32" height="32" >
+        </span>
+                    <a style="font-size: 20px;" class="selected" href="#">Dashboard</a>
+                </li>
+                <li>
+                    <span>
+          <img style="width: 30px;height: 40px;" src="../images/Basket.png" width="32" height="32" >
+        </span><a style="font-size: 20px;"  href="product.html">Shop</a>
+                </li>
+                <li>
+                    <span>
+          <img style="width: 30px; height: 40px;" src="" width="32" height="32" >
+        </span><a style="font-size: 20px;"  href="#">Media</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="content">
+            <h1>Dashboard</h1>
+
+            
+    <!-- #container -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
+
