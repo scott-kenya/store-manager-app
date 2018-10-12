@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <!--<link rel="stylesheet" type="text/css" href="../static/styles.css">-->
+  <link rel="stylesheet" type="text/css" href="../static/index.css">
+  <link rel="stylesheet" type="text/css" href="../static/login.css">
+  <link rel="stylesheet" type="text/css" href="../static/sales.css">
+</head>
+<body>
+  <nav>
+    <div class="navbar">
+  <a href="#home">Store Manager</a>
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;background-color: #ccc;color: #000;">Admin Login</button>
+</div>
+  </nav>
+
+<!-- code here -->
+<div class="box2">
+<h2>My Customers</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:20%;">Attendants Name</th>
+    <th style="width:20%;">Product ID</th>
+    <th style="width:20%;">No of Transactions</th>
+    <th style="width:20%;">Weekly Amount(ksh)</th>
+    <th style="width:20%;">Total Amount(kshs)</th>
+  </tr>
+  <tr>
+    <td>John Doe</td>
+    <td>Q234</td>
+    <td>20</td>
+    <td>9800</td>
+    <td>102,000</td>
+    
+  </tr>
+  <tr>
+     <td>Jane Doe</td>
+    <td>Q234</td>
+    <td>29</td>
+    <td>9800</td>
+    <td>192,000</td>
+  </tr>
+  <tr>
+    <td>Sarah kay</td>
+    <td>Q234</td>
+    <td>79</td>
+    <td>9800</td>
+    <td>10,002,000</td>
+  </tr>
+  <tr>
+    <td>Paul Walker</td>
+    <td>Q234</td>
+    <td>59</td>
+    <td>98000</td>
+    <td>10,200,000</td>
+  </tr>
+  <tr>
+     <td>Scott Dela</td>
+    <td>Q234</td>
+    <td>49</td>
+    <td>9800</td>
+    <td>300,000</td>
+  </tr>
+  <tr>
+     <td>Sueabby Babes</td>
+    <td>Q234</td>
+    <td>56</td>
+    <td>9800</td>
+    <td>1,102,000</td>
+  </tr>
+  <tr>
+    <td>Joseph Lutwama</td>
+    <td>Q234</td>
+    <td>209</td>
+    <td>9800</td>
+    <td>102,000,000</td>
+  </tr>
+  <tr>
+     <td>Osama Laden</td>
+    <td>Q234</td>
+    <td>29</td>
+    <td>9800</td>
+    <td>102,000</td>
+  </tr>
+</table>
+</div>
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+</body>
+</html>
