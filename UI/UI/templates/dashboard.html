@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="../static/index.css">
+  <link rel="stylesheet" type="text/css" href="../static/login.css">
+   <link rel="stylesheet" href="../static/untitl.css">
+   <link rel="stylesheet" type="text/css" href="../static/dash.css">
+    <script>
+      $(document).ready(function(){
+  $("a.mobile").click(function(){
+    $(".sidebar").slideToggle('fast');
+  });
+  window.resize = function(event){
+    if($(window).width() > 320){
+      $(".sidebar").show();
+    }
+  };
+});
+  </script>
+</head>
+<body>
+  <nav>
+    <div class="navbar">
+  <a href="#home">Store Manager</a>
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;background-color: #ccc;color: #000;">Admin Login</button>
+</div>
+  </nav>
+
+<!-- code here -->
+
+<div class="sidebar">
+            <ul id="nav">
+                <li>
+                    <span>
+          <img style="width: 30px; height: 40px;" src="../images/dash.png" width="32" height="32" >
+        </span>
+                    <a style="font-size: 20px;" class="selected" href="#">Dashboard</a>
+                </li>
+                <li>
+                    <span>
+          <img style="width: 30px;height: 40px;" src="../images/Basket.png" width="32" height="32" >
+        </span><a style="font-size: 20px;"  href="product.html">Shop</a>
+                </li>
+        </div>
+
+<!-- code here -->
+
+      <div class="split left">
+            <div class="centered">
+              <div class="content">
+            <h1>Dashboard</h1>
+
+            <h1 style="font-size: 15px;">Sales Trajectory</h1>
+
+                <p>Black Forest</p>
+                <div class="container">
+                <div class="cake bf">90%</div>
+                </div>
+
+                <p>Chocolate Cake</p>
+                <div class="container">
+                <div class="cake choc">80%</div>
+                </div>
+
+                <p>Cookies</p>
+                <div class="container">
+                <div class="cake cook">65%</div>
+                </div>
+
+                <p>Vanilla Cake</p>
+                <div class="container">
+                <div class="cake van">60%</div>
+                </div>
+            </div>
+      </div>
+
+    <div class="split right">
+      <div class="centered">
+        <div class="content">
+          <div class="month">      
+                    <ul>
+                      <li class="prev">&#10094;</li>
+                      <li class="next">&#10095;</li>
+                      <li>
+                        August<br>
+                        <span style="font-size:18px">2018</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <ul class="weekdays">
+                    <li>Mo</li>
+                    <li>Tu</li>
+                    <li>We</li>
+                    <li>Th</li>
+                    <li>Fr</li>
+                    <li>Sa</li>
+                    <li>Su</li>
+                  </ul>
+
+                  <ul class="days">  
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li><span class="active">10</span></li>
+                    <li>11</li>
+                    <li>12</li>
+                    <li>13</li>
+                    <li>14</li>
+                    <li>15</li>
+                    <li>16</li>
+                    <li>17</li>
+                    <li>18</li>
+                    <li>19</li>
+                    <li>20</li>
+                    <li>21</li>
+                    <li>22</li>
+                    <li>23</li>
+                    <li>24</li>
+                    <li>25</li>
+                    <li>26</li>
+                    <li>27</li>
+                    <li>28</li>
+                    <li>29</li>
+                    <li>30</li>
+                    <li>31</li>
+                  </ul>
+                          </div>
+      </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
+
